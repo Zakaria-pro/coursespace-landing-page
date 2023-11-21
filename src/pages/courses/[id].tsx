@@ -7,6 +7,7 @@ import TopHeaderBanner from '@/components/home/banner'
 import { Box, Container, Typography } from '@mui/material'
 import dynamic from 'next/dynamic'
 import CourseDescription from '@/components/course/course-description'
+import Example from '@/components/breadcrumbs/breadcrumbs'
 
 const DynamicHomeNewsLetter = dynamic(() => import('../../components/home/newsletter'))
 const DynamicHomeLearningProcess = dynamic(() => import('../../components/home/learning-process'))
@@ -30,6 +31,7 @@ const Course: NextPageWithLayout = () => {
         subtitle="Embrace the opportunity to explore, learn, and thrive in the digital realm of knowledge that Chaimae's online courses offer"
       />
       <div style={{ paddingTop: '70vh' }}>
+        <Example />
         <CourseDescription mentor={mentor} />
         <DynamicHomeLearningProcess imageSrc="" altText="" />
 

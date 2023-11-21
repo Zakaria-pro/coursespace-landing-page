@@ -1,0 +1,51 @@
+._2jvtI {
+  list-style: none;
+  overflow: hidden;
+  font: 16px Sans-Serif;
+  background: #f2f5f5;
+  display: flex;
+}
+
+._2jvtI li {
+  margin-right: -10px; /* Adjust the space between li elements */
+}
+
+._2jvtI li a {
+  color: #666; /* Initial color gray */
+  text-decoration: none;
+  padding: 10px 10px; /* Adjust the padding as needed */
+  position: relative;
+  display: block;
+  float: left;
+  background: #f2f5f5;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+._2jvtI li a:hover {
+  color: #127c71; /* Green color on hover */
+}
+
+._2jvtI li:last-child a {
+  font-weight: bold;
+  pointer-events: none;
+  cursor: default;
+}
+
+._2jvtI li.separator {
+  color: #666; /* Initial color gray for the bar */
+  margin-right: 2px; /* Adjust the space between li and the bar */
+}
+
+._2jvtI li a:hover + li.separator {
+  color: #127c71; /* Color of the bar on hover */
+}
+
+._2jvtI li:not(:last-child) a::after {
+  content: '|';
+  margin-left: 2px; /* Adjust the space between li and the bar */
+  color: #666; /* Color of the bar initially gray */
+}
+
+._2jvtI li:not(:last-child) a:hover::after {
+  color: #127c71; /* Color of the bar on hover */
+}

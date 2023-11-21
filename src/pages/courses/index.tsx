@@ -4,6 +4,7 @@ import { NextPageWithLayout } from '@/interfaces/layout'
 import { MainLayout } from '@/components/layout'
 import TopHeaderBanner from '@/components/home/banner'
 import { Container } from '@mui/material'
+import Example from '@/components/breadcrumbs/breadcrumbs'
 
 const DynamicHomeHero = dynamic(() => import('../../components/home/hero'))
 const DynamicHomeFeature = dynamic(() => import('../../components/home/feature'))
@@ -23,10 +24,11 @@ const Course: NextPageWithLayout = () => {
         title="Discover our online courses"
         subtitle="Embrace the opportunity to explore, learn, and thrive in the digital realm of knowledge that Chaimae's online courses offer"
       />
-      <Container sx={{ pt: '70vh' }}>
+      <div style={{ paddingTop: '70vh' }}>
+        <Example />
         <DynamicHomeOurMentors />
         <DynamicHomeNewsLetter />
-      </Container>
+      </div>
     </>
   )
 }
